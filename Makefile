@@ -16,6 +16,10 @@ INCLUDES	+=	-I../libft/includes
 
 SOURCES		=	new_command.c
 SOURCES		+=	details_of_command.c
+SOURCES		+=	new_option.c
+SOURCES		+=	add_option_to.c
+SOURCES		+=	init_options.c
+SOURCES		+=	details_options_of_command.c
 
 OBJECTS		=	$(patsubst %.c, $(BUILD)/$(DOBJECTS)%.o, $(SOURCES))
 
