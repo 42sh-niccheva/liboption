@@ -6,6 +6,7 @@
 
 typedef struct s_option		t_option;
 typedef struct s_command	t_command;
+typedef struct s_commands	t_commands;
 
 struct		s_option
 {
@@ -20,15 +21,26 @@ struct		s_command
 	char		*name;
 	char		*description;
 	t_option	*options;
-	int			nbr_options;
+	size_t		nbr_options;
 };
 
+struct		s_commands
+{
+	t_command	*command;
+	t_list		list;
+};
+
+t_commands	*init_commands(void);
+void		add_command_to(t_commands *collection_commands, t_command *command);
+void		details_commands_of_collection(t_commands *collection);
+
 t_command	*new_command(const char *name, const char *description);
+void		add_option_to(t_command *command, t_option *option);
+void		details_of_command(t_command *command);
+
 t_option	*new_option(const char *little_arg, const char *long_arg,
 						const char *description);
-void		add_option_to(t_command *command, t_option *option);
 t_option	*init_options(void);
-void		details_of_command(t_command *command);
 void		details_options_of_command(t_command *command);
 
 #endif

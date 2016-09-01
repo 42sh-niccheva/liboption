@@ -15,11 +15,14 @@ INCLUDES	+=	-I../liblist/includes
 INCLUDES	+=	-I../libft/includes
 
 SOURCES		=	new_command.c
+SOURCES		+=	add_option_to.c
 SOURCES		+=	details_of_command.c
 SOURCES		+=	new_option.c
-SOURCES		+=	add_option_to.c
 SOURCES		+=	init_options.c
 SOURCES		+=	details_options_of_command.c
+SOURCES		+=	init_commands.c
+SOURCES		+=	add_command_to.c
+SOURCES		+=	details_commands_of_collection.c
 
 OBJECTS		=	$(patsubst %.c, $(BUILD)/$(DOBJECTS)%.o, $(SOURCES))
 
