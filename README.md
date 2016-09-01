@@ -1,10 +1,11 @@
 # Liboption
 
-First of all you need few libraries for that it works:
-###
-	  * https://github.com/42sh-niccheva/libft
-	  * https://github.com/42sh-niccheva/liblist
+### Dependancies
 
+* https://github.com/42sh-niccheva/libft
+* https://github.com/42sh-niccheva/liblist
+
+### Example
 
 ```c
 struct			s_commands
