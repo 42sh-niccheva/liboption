@@ -3,6 +3,11 @@
 
 # include "list.h"
 # include "libft.h"
+# include <stdbool.h>
+
+# define SHORT_OPT_PREFIX "-"
+# define LONG_OPT_PREFIX "--"
+# define ARGUMENT_STOPPER "--"
 
 typedef struct s_option		t_option;
 typedef struct s_command	t_command;
@@ -13,6 +18,7 @@ struct		s_option
 	char		*little_arg;
 	char		*long_arg;
 	char		*description;
+	bool		active;
 	t_list		list;
 };
 
