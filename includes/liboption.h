@@ -36,17 +36,19 @@ struct		s_commands
 	t_list		list;
 };
 
-t_commands	*init_commands(void);
 void		add_command_to(t_commands *collection_commands, t_command *command);
 void		details_commands_of_collection(t_commands *collection);
+t_commands	*init_commands(void);
 
-t_command	*new_command(const char *name, const char *description);
 void		add_option_to(t_command *command, t_option *option);
 void		details_of_command(t_command *command);
+t_command	*new_command(const char *name, const char *description);
 
+void		details_options_of_command(t_command *command);
+t_option	*init_options(void);
+bool		is_active(t_command *command, char *argument);
 t_option	*new_option(const char *little_arg, const char *long_arg,
 						const char *description);
-t_option	*init_options(void);
-void		details_options_of_command(t_command *command);
+bool		option_exist(t_command *command, char *argument);
 
 #endif
