@@ -25,6 +25,7 @@ SOURCES		+=	add_command_to.c
 SOURCES		+=	details_commands_of_collection.c
 SOURCES		+=	option_exist.c
 SOURCES		+=	is_active.c
+SOURCES		+=	command_with_name.c
 
 OBJECTS		=	$(patsubst %.c, $(BUILD)/$(DOBJECTS)%.o, $(SOURCES))
 

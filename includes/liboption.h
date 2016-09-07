@@ -42,6 +42,7 @@ t_commands	*init_commands(void);
 
 void		add_option_to(t_command *command, t_option *option);
 void		details_of_command(t_command *command);
+t_command	*command_with_name(t_commands *collection, const char *name);
 t_command	*new_command(const char *name, const char *description);
 
 void		details_options_of_command(t_command *command);
