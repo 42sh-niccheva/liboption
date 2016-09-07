@@ -9,7 +9,8 @@ void	active_option_of_command(t_command *command, const char *arg)
 	while (pos != &(command->options->list) && command->nbr_options)
 	{
 		option = LIST_ENTRY(pos, t_option, list);
-		if (ft_strequ(option->long_arg, arg) && !option->active)
+		if ((ft_strequ(option->little_arg, arg)
+			 || ft_strequ(option->long_arg, arg)) && !option->active)
 		{
 			option->active = true;
 			break ;

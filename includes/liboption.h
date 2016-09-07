@@ -46,6 +46,7 @@ t_command	*command_with_name(t_commands *collection, const char *name);
 t_command	*new_command(const char *name, const char *description);
 bool		parse_command(const char **argv, t_command *command);
 bool		parse_command_long_option(t_command *command, const char *option);
+bool		parse_command_little_option(t_command *command, const char *args);
 
 void		active_option_of_command(t_command *command, const char *arg);
 void		details_options_of_command(t_command *command);
