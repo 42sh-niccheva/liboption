@@ -1,6 +1,6 @@
 #include "liboption.h"
 
-bool		parse_command(int argc, const char **argv, t_command *command)
+bool		parse_command(const char **argv, t_command *command)
 {
 	int			i;
 	int			parse;
@@ -11,10 +11,11 @@ bool		parse_command(int argc, const char **argv, t_command *command)
 	{
 		while (argv[i] && !ft_strequ(argv[i], ARGUMENT_STOPPER))
 		{
-			if (ft_strncmp(argv[i], LONG_OPT_PREFIX, 2))
+			if (!ft_strncmp(argv[i], LONG_OPT_PREFIX, 2))
 				parse = parse_command_long_option(command, argv[i]);
-			if (argv[i][0] == '-')
-				parse = parse_command_little_option(command, argv[i]);
+//			if (argv[i][0] == SHORT_OPT_PREFIX[0])
+//				parse = parse_command_little_option(command, argv[i]);
+			++i;
 		}
 		if (!parse)
 		{
@@ -23,6 +24,6 @@ bool		parse_command(int argc, const char **argv, t_command *command)
 		}
 	}
 	else
-		value = false;
-	return parse;
+		parse = false;
+	return (parse);
 }

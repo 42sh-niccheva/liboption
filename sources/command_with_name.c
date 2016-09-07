@@ -11,9 +11,9 @@ t_command	*command_with_name(t_commands *collection, const char *name)
 		commands = LIST_ENTRY(pos, t_commands, list);
 		if (ft_strequ(commands->command->name, name))
 		{
-			return commands->command;
+			return (commands->command);
 		}
 		pos = pos->next;
 	}
-	return NULL;
+	return (NULL);
 }

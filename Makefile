@@ -26,6 +26,9 @@ SOURCES		+=	details_commands_of_collection.c
 SOURCES		+=	option_exist.c
 SOURCES		+=	is_active.c
 SOURCES		+=	command_with_name.c
+SOURCES		+=	active_option_of_command.c
+SOURCES		+=	parse_command.c
+SOURCES		+=	parse_command_long_option.c
 
 OBJECTS		=	$(patsubst %.c, $(BUILD)/$(DOBJECTS)%.o, $(SOURCES))
 
