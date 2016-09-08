@@ -55,5 +55,6 @@ bool		is_active(t_command *command, char *argument);
 t_option	*new_option(const char *little_arg, const char *long_arg,
 						const char *description);
 bool		option_exist(t_command *command, const char *argument);
+int			skip_options(const char **argv);
 
 #endif

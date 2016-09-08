@@ -7,7 +7,7 @@ bool		parse_command_long_option(t_command *command, const char *option)
 	value = true;
 	if (option_exist(command, option + 2))
 	{
-		active_option_of_command(command, option);
+		active_option_of_command(command, option + 2);
 	}
 	else
 		value = false;
