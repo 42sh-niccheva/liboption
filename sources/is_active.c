@@ -12,12 +12,12 @@ bool	is_active(t_command *command, char *argument)
 		{
 			option = LIST_ENTRY(pos, t_option, list);
 			if (option && (ft_strequ(option->little_arg, argument)
-						   || ft_strequ(option->long_arg, argument)))
+						|| ft_strequ(option->long_arg, argument)))
 			{
-				return option->active;
+				return (option->active);
 			}
 			pos = pos->next;
 		}
 	}
-	return false;
+	return (false);
 }

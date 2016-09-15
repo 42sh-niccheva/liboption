@@ -21,7 +21,7 @@ static void	print_option(t_option *option)
 	ft_putchar('\n');
 }
 
-void	details_options_of_command(t_command *command)
+void		details_options_of_command(t_command *command)
 {
 	t_list		*pos;
 	t_option	*option;
